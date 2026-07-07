@@ -9,7 +9,6 @@ Este AbstractModel centraliza todas las llamadas HTTP a la API IXC.
 import base64
 import logging
 
-import requests
 from odoo import models, _
 from odoo.exceptions import UserError
 
@@ -61,6 +60,8 @@ class IxcClient(models.AbstractModel):
         https://wikiapiprovedor.ixcsoft.com.br/
         https://wiki.ixcsoft.com.br/pt-br/API
         """
+        import requests
+
         base_url, token = self._get_config()
         headers = self._get_headers(token)
         url = "%s/webservice/v1/%s" % (base_url, endpoint)

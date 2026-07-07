@@ -18,8 +18,11 @@
     "application": True,
     "installable": True,
     "depends": ["base", "mail", "sign", "sale"],
+    "external_dependencies": {
+        "python": ["requests"],
+    },
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.model.access.xml",
         "data/ir_sequence_data.xml",
         "data/ir_cron_data.xml",
         "views/data_plan_views.xml",

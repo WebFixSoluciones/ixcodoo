@@ -2,7 +2,6 @@
 import base64
 import logging
 
-import requests
 from odoo import models, fields, _
 
 _logger = logging.getLogger(__name__)
@@ -46,6 +45,8 @@ class ResConfigSettings(models.TransientModel):
                     "sticky": False,
                 },
             }
+
+        import requests
 
         try:
             auth_str = base64.b64encode(("%s:" % token).encode()).decode()

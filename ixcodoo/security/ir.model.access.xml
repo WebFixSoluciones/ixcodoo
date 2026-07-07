@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="access_ixcodoo_data_plan_user" model="ir.model.access">
+            <field name="name">ixcodoo.data.plan.user</field>
+            <field name="model_id" ref="model_ixcodoo_data_plan"/>
+            <field name="group_id" ref="base.group_user"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_ixcodoo_data_plan_admin" model="ir.model.access">
+            <field name="name">ixcodoo.data.plan.admin</field>
+            <field name="model_id" ref="model_ixcodoo_data_plan"/>
+            <field name="group_id" ref="base.group_system"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_ixcodoo_contract_plan_user" model="ir.model.access">
+            <field name="name">ixcodoo.contract.plan.user</field>
+            <field name="model_id" ref="model_ixcodoo_contract_plan"/>
+            <field name="group_id" ref="base.group_user"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+        <record id="access_ixcodoo_contract_plan_admin" model="ir.model.access">
+            <field name="name">ixcodoo.contract.plan.admin</field>
+            <field name="model_id" ref="model_ixcodoo_contract_plan"/>
+            <field name="group_id" ref="base.group_system"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+        </record>
+
+        <record id="access_ixcodoo_ixc_client_admin" model="ir.model.access">
+            <field name="name">ixcodoo.ixc.client.admin</field>
+            <field name="model_id" ref="model_ixcodoo_ixc_client"/>
+            <field name="group_id" ref="base.group_system"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="0"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+    </data>
+</odoo>
