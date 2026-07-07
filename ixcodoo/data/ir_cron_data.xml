@@ -4,7 +4,7 @@
 
         <record id="ixcodoo_cron_check_signed_contracts" model="ir.cron">
             <field name="name">IXCODOO: Verificar contratos firmados</field>
-            <field name="model_id" eval="self.env['ir.model']._get('ixcodoo.contract.plan').id"/>
+            <field name="model_id" eval="obj.env['ir.model']._get('ixcodoo.contract.plan').id"/>
             <field name="state">code</field>
             <field name="code">model._cron_check_signed_contracts()</field>
             <field name="interval_number">1</field>
