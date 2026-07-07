@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ixcodoo_data_plan_user,ixcodoo.data.plan.user,model_ixcodoo_data_plan,base.group_user,1,1,1,0
+access_ixcodoo_data_plan_admin,ixcodoo.data.plan.admin,model_ixcodoo_data_plan,base.group_system,1,1,1,1
+access_ixcodoo_contract_plan_user,ixcodoo.contract.plan.user,model_ixcodoo_contract_plan,base.group_user,1,1,1,0
+access_ixcodoo_contract_plan_admin,ixcodoo.contract.plan.admin,model_ixcodoo_contract_plan,base.group_system,1,1,1,1
+access_ixcodoo_ixc_client_admin,ixcodoo.ixc.client.admin,model_ixcodoo_ixc_client,base.group_system,1,0,0,0

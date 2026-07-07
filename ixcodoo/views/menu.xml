@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menu_ixcodoo_root"
+              name="IXCODOO"
+              web_icon="ixcodoo,static/description/icon.png"
+              sequence="100"/>
+
+    <menuitem id="menu_ixcodoo_contracts"
+              name="Contratos"
+              parent="menu_ixcodoo_root"
+              sequence="10"/>
+
+    <menuitem id="menu_ixcodoo_contract_plan"
+              name="Contratos de Plan"
+              parent="menu_ixcodoo_contracts"
+              action="action_ixcodoo_contract_plan"
+              sequence="10"/>
+
+    <menuitem id="menu_ixcodoo_config"
+              name="Configuracion"
+              parent="menu_ixcodoo_root"
+              sequence="90"/>
+
+    <menuitem id="menu_ixcodoo_data_plan"
+              name="Planes"
+              parent="menu_ixcodoo_config"
+              action="action_ixcodoo_data_plan"
+              sequence="10"/>
+
+</odoo>

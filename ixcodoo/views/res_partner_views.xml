@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="ixcodoo_res_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.form.ixcodoo</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="IXCODOO" name="ixcodoo_tab">
+                    <group string="Plan Contratado">
+                        <group>
+                            <field name="ixcodoo_plan_id"/>
+                            <field name="ixcodoo_contract_state"/>
+                        </group>
+                        <group>
+                            <field name="ixcodoo_contract_start"/>
+                            <field name="ixcodoo_contract_end"/>
+                        </group>
+                    </group>
+                    <group string="Contratos">
+                        <field name="ixcodoo_contract_ids" nolabel="1">
+                            <list>
+                                <field name="name"/>
+                                <field name="plan_id"/>
+                                <field name="state"/>
+                                <field name="starting_date"/>
+                                <field name="ending_date"/>
+                            </list>
+                        </field>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+</odoo>

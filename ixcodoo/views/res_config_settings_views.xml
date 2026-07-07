@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="ixcodoo_res_config_settings_form" model="ir.ui.view">
+        <field name="name">res.config.settings.form.ixcodoo</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="Integracion IXC" data-key="ixcodoo"
+                     string="Integracion IXC">
+                    <block title="Conexion API IXC Provedor">
+                        <setting string="URL Base"
+                                 help="URL base de la API IXC Provedor. Ej: https://miempresa.ixcsoft.com.br">
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label for="ixcodoo_base_url"
+                                           class="col-lg-3 o_light_label"/>
+                                    <field name="ixcodoo_base_url"
+                                           placeholder="https://miempresa.ixcsoft.com.br"/>
+                                </div>
+                            </div>
+                        </setting>
+                        <setting string="Token API"
+                                 help="Token de autenticacion para la API IXC. Se genera en: Configuraciones > Usuarios > Permite acesso a API">
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label for="ixcodoo_api_token"
+                                           class="col-lg-3 o_light_label"/>
+                                    <field name="ixcodoo_api_token" password="True"/>
+                                </div>
+                            </div>
+                        </setting>
+                        <setting string="Probar Conexion"
+                                 help="Verifica que la conexion con la API IXC Provedor funcione correctamente">
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <button name="action_test_ixc_connection"
+                                            string="Probar Conexion IXC"
+                                            type="object"
+                                            class="btn-primary"
+                                            icon="fa-plug"/>
+                                </div>
+                            </div>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
